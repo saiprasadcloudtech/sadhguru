@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       parallel {
-        stage('build') {
+        stage('Build') {
           steps {
             echo 'Building a .Net App'
           }
