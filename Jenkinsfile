@@ -28,7 +28,7 @@ pipeline {
     stage('Deploy') {
       when {
         branch 'main'
-      }
+      
       parallel {
         stage('Deploy') {
           steps {
@@ -36,6 +36,7 @@ pipeline {
             echo 'Deploying the app in the IIS server'
           }
         }
+      }
 
         stage('Artifact') {
           steps {
